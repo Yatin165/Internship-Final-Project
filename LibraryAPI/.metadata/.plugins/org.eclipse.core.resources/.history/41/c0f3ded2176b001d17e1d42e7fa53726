@@ -1,0 +1,317 @@
+23-Nov-2022 15:22:28 INFO - HV000001: Hibernate Validator 6.2.5.Final
+23-Nov-2022 15:22:28 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23-Nov-2022 15:22:30 INFO - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/student-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+23-Nov-2022 15:22:30 INFO - No active profile set, falling back to 1 default profile: "default"
+23-Nov-2022 15:22:32 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-Nov-2022 15:22:32 INFO - Finished Spring Data repository scanning in 254 ms. Found 1 JPA repository interfaces.
+23-Nov-2022 15:22:33 INFO - BeanFactory id=42c6fedd-14db-3d31-af62-eb661888cc79
+23-Nov-2022 15:22:35 INFO - Tomcat initialized with port(s): 8082 (http)
+23-Nov-2022 15:22:35 INFO - Initializing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:22:35 INFO - Starting service [Tomcat]
+23-Nov-2022 15:22:35 INFO - Starting Servlet engine: [Apache Tomcat/9.0.68]
+23-Nov-2022 15:22:35 INFO - Initializing Spring embedded WebApplicationContext
+23-Nov-2022 15:22:35 INFO - Root WebApplicationContext: initialization completed in 4667 ms
+23-Nov-2022 15:22:36 INFO - d1 - Starting...
+23-Nov-2022 15:22:36 INFO - d1 - Start completed.
+23-Nov-2022 15:22:36 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-Nov-2022 15:22:37 INFO - HHH000412: Hibernate ORM core version 5.6.12.Final
+23-Nov-2022 15:22:37 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+23-Nov-2022 15:22:38 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+23-Nov-2022 15:22:39 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-Nov-2022 15:22:39 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:22:39 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-Nov-2022 15:22:46 INFO - LiveReload server is running on port 35729
+23-Nov-2022 15:22:47 WARN - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+23-Nov-2022 15:22:47 INFO - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-Nov-2022 15:22:47 INFO - Starting ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:22:47 INFO - Tomcat started on port(s): 8082 (http) with context path ''
+23-Nov-2022 15:22:47 INFO - Registering service with consul: NewService{id='student-service-8082', name='student-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=8082, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:8082/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+23-Nov-2022 15:22:47 INFO - Started StudentApiApplication in 20.422 seconds (JVM running for 22.858)
+23-Nov-2022 15:22:51 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-Nov-2022 15:22:51 INFO - Initializing Servlet 'dispatcherServlet'
+23-Nov-2022 15:22:51 INFO - Completed initialization in 3 ms
+23-Nov-2022 15:26:55 INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+23-Nov-2022 15:26:55 INFO - Pausing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:26:55 INFO - Stopping service [Tomcat]
+23-Nov-2022 15:26:55 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+23-Nov-2022 15:26:55 INFO - Stopping ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:26:55 INFO - Destroying ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:26:55 INFO - Deregistering service with consul: student-service-8082
+23-Nov-2022 15:26:56 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:26:56 INFO - d1 - Shutdown initiated...
+23-Nov-2022 15:26:56 INFO - d1 - Shutdown completed.
+23-Nov-2022 15:26:56 ERROR - Application run failed
+java.lang.IllegalStateException: org.apache.logging.log4j.core.config.ConfigurationException: No name attribute provided for Appender console
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66) ~[spring-boot-2.7.5.jar:2.7.5]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:195) ~[spring-cloud-context-3.1.5.jar:3.1.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114) ~[spring-cloud-context-3.1.5.jar:3.1.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:77) ~[spring-cloud-context-3.1.5.jar:3.1.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66) ~[spring-boot-2.7.5.jar:2.7.5]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.student.StudentApiApplication.main(StudentApiApplication.java:18) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+Caused by: org.apache.logging.log4j.core.config.ConfigurationException: No name attribute provided for Appender console
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationBuilder.createAppender(PropertiesConfigurationBuilder.java:219) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationBuilder.build(PropertiesConfigurationBuilder.java:159) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory.getConfiguration(PropertiesConfigurationFactory.java:56) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory.getConfiguration(PropertiesConfigurationFactory.java:35) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.ConfigurationFactory$Factory.getConfiguration(ConfigurationFactory.java:559) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.ConfigurationFactory$Factory.getConfiguration(ConfigurationFactory.java:483) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.ConfigurationFactory.getConfiguration(ConfigurationFactory.java:325) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:690) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:711) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.reinitialize(Log4J2LoggingSystem.java:261) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:169) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329) ~[spring-boot-2.7.5.jar:2.7.5]
+	... 39 more
+23-Nov-2022 15:26:56 ERROR - Application run failed
+java.lang.IllegalStateException: org.apache.logging.log4j.core.config.ConfigurationException: No name attribute provided for Appender console
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66) ~[spring-boot-2.7.5.jar:2.7.5]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:195) ~[spring-cloud-context-3.1.5.jar:3.1.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114) ~[spring-cloud-context-3.1.5.jar:3.1.5]
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:77) ~[spring-cloud-context-3.1.5.jar:3.1.5]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131) ~[spring-context-5.3.23.jar:5.3.23]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66) ~[spring-boot-2.7.5.jar:2.7.5]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.5.jar:2.7.5]
+	at com.student.StudentApiApplication.main(StudentApiApplication.java:18) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.5.jar:2.7.5]
+Caused by: org.apache.logging.log4j.core.config.ConfigurationException: No name attribute provided for Appender console
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationBuilder.createAppender(PropertiesConfigurationBuilder.java:219) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationBuilder.build(PropertiesConfigurationBuilder.java:159) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory.getConfiguration(PropertiesConfigurationFactory.java:56) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.properties.PropertiesConfigurationFactory.getConfiguration(PropertiesConfigurationFactory.java:35) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.ConfigurationFactory$Factory.getConfiguration(ConfigurationFactory.java:559) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.ConfigurationFactory$Factory.getConfiguration(ConfigurationFactory.java:483) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.config.ConfigurationFactory.getConfiguration(ConfigurationFactory.java:325) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:690) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:711) ~[log4j-core-2.17.2.jar:2.17.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.reinitialize(Log4J2LoggingSystem.java:261) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:73) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:169) ~[spring-boot-2.7.5.jar:2.7.5]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329) ~[spring-boot-2.7.5.jar:2.7.5]
+	... 39 more
+23-Nov-2022 15:28:17 INFO - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/student-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+23-Nov-2022 15:28:17 INFO - No active profile set, falling back to 1 default profile: "default"
+23-Nov-2022 15:28:18 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-Nov-2022 15:28:18 INFO - Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+23-Nov-2022 15:28:18 INFO - BeanFactory id=42c6fedd-14db-3d31-af62-eb661888cc79
+23-Nov-2022 15:28:18 INFO - Tomcat initialized with port(s): 8082 (http)
+23-Nov-2022 15:28:18 INFO - Initializing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:18 INFO - Starting service [Tomcat]
+23-Nov-2022 15:28:18 INFO - Starting Servlet engine: [Apache Tomcat/9.0.68]
+23-Nov-2022 15:28:18 INFO - Initializing Spring embedded WebApplicationContext
+23-Nov-2022 15:28:18 INFO - Root WebApplicationContext: initialization completed in 1298 ms
+23-Nov-2022 15:28:19 INFO - d1 - Starting...
+23-Nov-2022 15:28:19 INFO - d1 - Start completed.
+23-Nov-2022 15:28:19 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-Nov-2022 15:28:19 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+23-Nov-2022 15:28:19 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-Nov-2022 15:28:19 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:28:19 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-Nov-2022 15:28:24 INFO - LiveReload server is running on port 35729
+23-Nov-2022 15:28:25 WARN - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+23-Nov-2022 15:28:25 INFO - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-Nov-2022 15:28:25 INFO - Starting ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:25 INFO - Tomcat started on port(s): 8082 (http) with context path ''
+23-Nov-2022 15:28:25 INFO - Registering service with consul: NewService{id='student-service-8082', name='student-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=8082, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:8082/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+23-Nov-2022 15:28:25 INFO - Started StudentApiApplication in 8.995 seconds (JVM running for 360.589)
+23-Nov-2022 15:28:25 INFO - Condition evaluation unchanged
+23-Nov-2022 15:28:27 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-Nov-2022 15:28:27 INFO - Initializing Servlet 'dispatcherServlet'
+23-Nov-2022 15:28:27 INFO - Completed initialization in 4 ms
+23-Nov-2022 15:28:48 INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+23-Nov-2022 15:28:48 INFO - Pausing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:48 INFO - Stopping service [Tomcat]
+23-Nov-2022 15:28:48 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+23-Nov-2022 15:28:48 INFO - Stopping ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:48 INFO - Destroying ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:48 INFO - Deregistering service with consul: student-service-8082
+23-Nov-2022 15:28:48 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:28:48 INFO - d1 - Shutdown initiated...
+23-Nov-2022 15:28:48 INFO - d1 - Shutdown completed.
+23-Nov-2022 15:28:49 INFO - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/student-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+23-Nov-2022 15:28:49 INFO - No active profile set, falling back to 1 default profile: "default"
+23-Nov-2022 15:28:50 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-Nov-2022 15:28:50 INFO - Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+23-Nov-2022 15:28:50 INFO - BeanFactory id=42c6fedd-14db-3d31-af62-eb661888cc79
+23-Nov-2022 15:28:50 INFO - Tomcat initialized with port(s): 8082 (http)
+23-Nov-2022 15:28:50 INFO - Initializing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:50 INFO - Starting service [Tomcat]
+23-Nov-2022 15:28:50 INFO - Starting Servlet engine: [Apache Tomcat/9.0.68]
+23-Nov-2022 15:28:50 INFO - Initializing Spring embedded WebApplicationContext
+23-Nov-2022 15:28:50 INFO - Root WebApplicationContext: initialization completed in 1270 ms
+23-Nov-2022 15:28:51 INFO - d1 - Starting...
+23-Nov-2022 15:28:51 INFO - d1 - Start completed.
+23-Nov-2022 15:28:51 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-Nov-2022 15:28:51 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+23-Nov-2022 15:28:51 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-Nov-2022 15:28:51 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:28:52 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-Nov-2022 15:28:57 INFO - LiveReload server is running on port 35729
+23-Nov-2022 15:28:57 WARN - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+23-Nov-2022 15:28:57 INFO - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-Nov-2022 15:28:58 INFO - Starting ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:28:58 INFO - Tomcat started on port(s): 8082 (http) with context path ''
+23-Nov-2022 15:28:58 INFO - Registering service with consul: NewService{id='student-service-8082', name='student-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=8082, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:8082/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+23-Nov-2022 15:28:58 INFO - Started StudentApiApplication in 9.631 seconds (JVM running for 393.267)
+23-Nov-2022 15:28:58 INFO - Condition evaluation unchanged
+23-Nov-2022 15:29:05 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-Nov-2022 15:29:05 INFO - Initializing Servlet 'dispatcherServlet'
+23-Nov-2022 15:29:05 INFO - Completed initialization in 3 ms
+23-Nov-2022 15:29:40 INFO - Application shutdown requested.
+23-Nov-2022 15:29:40 INFO - Pausing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:29:40 INFO - Stopping service [Tomcat]
+23-Nov-2022 15:29:40 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+23-Nov-2022 15:29:40 INFO - Stopping ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:29:40 INFO - Destroying ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:29:40 INFO - Deregistering service with consul: student-service-8082
+23-Nov-2022 15:29:41 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:29:41 INFO - d1 - Shutdown initiated...
+23-Nov-2022 15:29:41 INFO - d1 - Shutdown completed.
+23-Nov-2022 15:30:23 INFO - HV000001: Hibernate Validator 6.2.5.Final
+23-Nov-2022 15:30:23 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23-Nov-2022 15:30:25 INFO - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/student-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+23-Nov-2022 15:30:25 INFO - No active profile set, falling back to 1 default profile: "default"
+23-Nov-2022 15:30:27 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-Nov-2022 15:30:27 INFO - Finished Spring Data repository scanning in 297 ms. Found 1 JPA repository interfaces.
+23-Nov-2022 15:30:28 INFO - BeanFactory id=42c6fedd-14db-3d31-af62-eb661888cc79
+23-Nov-2022 15:30:29 INFO - Tomcat initialized with port(s): 8082 (http)
+23-Nov-2022 15:30:29 INFO - Initializing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:30:29 INFO - Starting service [Tomcat]
+23-Nov-2022 15:30:29 INFO - Starting Servlet engine: [Apache Tomcat/9.0.68]
+23-Nov-2022 15:30:29 INFO - Initializing Spring embedded WebApplicationContext
+23-Nov-2022 15:30:29 INFO - Root WebApplicationContext: initialization completed in 4324 ms
+23-Nov-2022 15:30:30 INFO - d1 - Starting...
+23-Nov-2022 15:30:31 INFO - d1 - Start completed.
+23-Nov-2022 15:30:31 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-Nov-2022 15:30:31 INFO - HHH000412: Hibernate ORM core version 5.6.12.Final
+23-Nov-2022 15:30:31 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+23-Nov-2022 15:30:32 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+23-Nov-2022 15:30:32 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-Nov-2022 15:30:32 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:30:33 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-Nov-2022 15:30:39 INFO - LiveReload server is running on port 35729
+23-Nov-2022 15:30:40 WARN - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+23-Nov-2022 15:30:40 INFO - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-Nov-2022 15:30:40 INFO - Starting ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:30:40 INFO - Tomcat started on port(s): 8082 (http) with context path ''
+23-Nov-2022 15:30:40 INFO - Registering service with consul: NewService{id='student-service-8082', name='student-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=8082, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:8082/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+23-Nov-2022 15:30:41 INFO - Started StudentApiApplication in 18.854 seconds (JVM running for 20.927)
+23-Nov-2022 15:30:48 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-Nov-2022 15:30:48 INFO - Initializing Servlet 'dispatcherServlet'
+23-Nov-2022 15:30:48 INFO - Completed initialization in 4 ms
+23-Nov-2022 15:31:13 INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+23-Nov-2022 15:31:13 INFO - Pausing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:31:13 INFO - Stopping service [Tomcat]
+23-Nov-2022 15:31:13 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+23-Nov-2022 15:31:13 INFO - Stopping ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:31:13 INFO - Destroying ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:31:13 INFO - Deregistering service with consul: student-service-8082
+23-Nov-2022 15:31:13 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:31:13 INFO - d1 - Shutdown initiated...
+23-Nov-2022 15:31:13 INFO - d1 - Shutdown completed.
+23-Nov-2022 15:31:14 INFO - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/student-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+23-Nov-2022 15:31:14 INFO - No active profile set, falling back to 1 default profile: "default"
+23-Nov-2022 15:31:14 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23-Nov-2022 15:31:14 INFO - Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+23-Nov-2022 15:31:14 INFO - BeanFactory id=42c6fedd-14db-3d31-af62-eb661888cc79
+23-Nov-2022 15:31:15 INFO - Tomcat initialized with port(s): 8082 (http)
+23-Nov-2022 15:31:15 INFO - Initializing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:31:15 INFO - Starting service [Tomcat]
+23-Nov-2022 15:31:15 INFO - Starting Servlet engine: [Apache Tomcat/9.0.68]
+23-Nov-2022 15:31:15 INFO - Initializing Spring embedded WebApplicationContext
+23-Nov-2022 15:31:15 INFO - Root WebApplicationContext: initialization completed in 1338 ms
+23-Nov-2022 15:31:15 INFO - d1 - Starting...
+23-Nov-2022 15:31:15 INFO - d1 - Start completed.
+23-Nov-2022 15:31:15 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+23-Nov-2022 15:31:15 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+23-Nov-2022 15:31:15 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+23-Nov-2022 15:31:15 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:31:16 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23-Nov-2022 15:31:20 INFO - LiveReload server is running on port 35729
+23-Nov-2022 15:31:21 WARN - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+23-Nov-2022 15:31:21 INFO - Exposing 1 endpoint(s) beneath base path '/actuator'
+23-Nov-2022 15:31:21 INFO - Starting ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:31:21 INFO - Tomcat started on port(s): 8082 (http) with context path ''
+23-Nov-2022 15:31:21 INFO - Registering service with consul: NewService{id='student-service-8082', name='student-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=8082, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:8082/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+23-Nov-2022 15:31:21 INFO - Started StudentApiApplication in 8.634 seconds (JVM running for 61.726)
+23-Nov-2022 15:31:21 INFO - Condition evaluation unchanged
+23-Nov-2022 15:31:29 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23-Nov-2022 15:31:29 INFO - Initializing Servlet 'dispatcherServlet'
+23-Nov-2022 15:31:29 INFO - Completed initialization in 4 ms
+23-Nov-2022 15:34:50 INFO - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+23-Nov-2022 15:34:50 INFO - Pausing ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:34:50 INFO - Stopping service [Tomcat]
+23-Nov-2022 15:34:50 INFO - Destroying Spring FrameworkServlet 'dispatcherServlet'
+23-Nov-2022 15:34:50 INFO - Stopping ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:34:50 INFO - Destroying ProtocolHandler ["http-nio-8082"]
+23-Nov-2022 15:34:50 INFO - Deregistering service with consul: student-service-8082
+23-Nov-2022 15:34:50 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+23-Nov-2022 15:34:50 INFO - d1 - Shutdown initiated...
+23-Nov-2022 15:34:50 INFO - d1 - Shutdown completed.

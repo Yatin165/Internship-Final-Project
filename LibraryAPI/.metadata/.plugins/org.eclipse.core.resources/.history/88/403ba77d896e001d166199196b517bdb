@@ -1,0 +1,112 @@
+package com.book.service;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.book.dto.BookDTO;
+import com.book.dto.BookRequestDTO;
+import com.book.entity.Book;
+import com.book.excepiton.BookException;
+import com.book.repository.BookRepository;
+
+@Service
+@RefreshScope
+public class BookService {
+	
+	@Autowired
+	DiscoveryClient client;
+
+	@Autowired
+	BookRepository bookRepo;
+
+	public Book addBookToDatabase(BookRequestDTO book) {
+		Optional<Book> obj =bookRepo.findById(book.getBookId());
+		if(obj.isEmpty()) {
+		Book bookEntity = book.changeToEntity();
+		bookRepo.save(bookEntity);
+		return bookEntity;
+		}else {
+			throw new BookException("Book with id " + book.getBookId() + " is already available in Database");
+		}
+
+	}
+
+	public Book getBookFromDatabase(int id) {
+		Optional<Book> optional = bookRepo.findById(id);
+		if (optional.isEmpty()) {
+			throw new BookException("Book with id " + id + " is not available in Database");
+		} else {
+			Book book = optional.get();
+			return book;
+		}
+	}
+
+	public String deleteBookFromDatabase(int id) {
+		Optional<Book> optional = bookRepo.findById(id);
+		if (optional.isPresent()) {
+			bookRepo.deleteById(id);
+			return "Book with id " + id + "is deleted from database";
+		} else {
+			throw new BookException("Book with id " + id + "is not available in Database");
+		}
+	}
+
+	@Transactional
+	public String updateBookInDatabase(BookRequestDTO book) {
+		Optional<Book> optional = bookRepo.findById(book.getBookId());
+		if (optional.isPresent()) {
+			Book bookFromdb = optional.get();
+			bookFromdb.setAuthorName(book.getAuthorName());
+			bookFromdb.setAvailability(book.getAvailability());
+			bookFromdb.setBookName(book.getBookName());
+			return "Data of student with id " + book.getBookId() + " is updated";
+		} else {
+			throw new BookException(
+					"Student you are trying to update, with id " + book.getBookId() + " is not available in Database");
+		}
+	}
+
+	@Transactional
+	public BookDTO issueBookToStudent(int studentId, int bookId) {
+		Optional<Book> optional = bookRepo.findById(bookId);
+		if (optional.isPresent()) {
+			Book bookdb = optional.get();
+			if(bookdb.getAvailability().equals("Yes") ) {
+				bookdb.setIssuedTo(studentId);
+				bookdb.setIssueDate(LocalDateTime.now());
+				bookdb.setAvailability("No");
+				BookDTO bookDTO = bookdb.convertToDTO();
+				return bookDTO;
+			}else {
+				throw new BookException("Book is already issued to someone else");
+			}
+		}else {
+			throw new BookException("Book with id " + bookId + " is not available in Library");
+		}
+	}
+
+	@Transactional
+	public BookDTO returnBookToLibrary(int studentId, int bookId) {
+		Optional<Book> optional = bookRepo.findById(bookId);
+		if(optional.isPresent()) {
+			Book bookdb = optional.get();
+			if(bookdb.getAvailability().equals("No") ) {
+				bookdb.setIssuedTo(0);
+				bookdb.setIssueDate(null);
+				bookdb.setAvailability("Yes");
+				BookDTO bookDTO = bookdb.convertToDTO();
+				return bookDTO;
+			}else {
+				throw new BookException("Book is not issued to anyone");
+			}
+		}else {
+			throw new BookException("Book with id " + bookId + " is not available in Library");
+		}
+	}
+}

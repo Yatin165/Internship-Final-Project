@@ -1,0 +1,50 @@
+<div class="container">
+    <form (ngSubmit)="returnBook()">
+        <h1>Please fill Student id and BookId to return Book </h1>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Student Id</mat-label>
+            <input name="studentId" [(ngModel)]="studentId" matInput>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Book Id</mat-label>
+            <input name="bookId" [(ngModel)]="bookId" matInput>
+        </mat-form-field>
+        <div class="issuebutton">
+            <button type="submit" mat-raised-button color="primary" (click)="returnBook()">returnBook</button>
+        </div>
+    </form>
+</div>
+
+
+<div class="container">
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+        <th>StudentId</th>
+        <th>StudentName</th>
+        <th>EmailId</th>
+        <th>PhoneNumber</th>
+        <th>BookId</th>
+        <th>BookName</th>
+        <th>AuthorName</th>
+        <th>IssuedTo</th>
+        <th>IssueDate</th>
+        <th>Availability</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngIf="bookfetched">
+        <td><span>{{bookfetched.studentId}}</span></td>
+        <td><span>{{bookfetched.name}}</span></td>
+        <td><span>{{bookfetched.emailId}}</span></td>
+        <td><span>{{bookfetched.phoneNumber}}</span></td>
+        <td><span>{{bookfetched.bookDTO.bookId}}</span></td>
+        <td><span>{{bookfetched.bookDTO.bookName}}</span></td>
+        <td><span>{{bookfetched.bookDTO.authorName}}</span></td>
+        <td><span>{{bookfetched.bookDTO.issuedTo}}</span></td>
+        <td><span>{{bookfetched.bookDTO.issueDate}}</span></td>
+        <td><span>{{bookfetched.bookDTO.availability}}</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>

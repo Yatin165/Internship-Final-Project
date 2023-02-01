@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"book-service-9090","Service":"book-service","Tags":[],"Address":"WIN-0020ML4SOIQ","Meta":{"secure":"false"},"Port":9090,"Weights":{"Passing":1,"Warning":1},"EnableTagOverride":false,"Proxy":{"Mode":"","MeshGateway":{},"Expose":{}},"Connect":{},"PeerName":"","CreateIndex":0,"ModifyIndex":0},"Source":"remote"}

@@ -1,0 +1,59 @@
+package com.book.controller;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.book.dto.BookDTO;
+import com.book.dto.BookRequestDTO;
+import com.book.entity.Book;
+import com.book.service.BookService;
+import com.student.controller.StudentController;
+
+
+@RestController
+@CrossOrigin
+public class BookController {
+	
+	public static final Log LOGGER = LogFactory.getLog(BookController.class);
+	
+	@Autowired
+	BookService bookService;
+
+	@PostMapping("/addBook")
+	public Book addBook(@RequestBody BookRequestDTO book) {
+		return bookService.addBookToDatabase(book);
+	}
+	
+	@GetMapping("/getBook")
+	public Book getBook(int id) {
+		return bookService.getBookFromDatabase(id);
+	}
+	
+	@DeleteMapping("/deleteBook")
+	public String deleteBook(int id) {
+		return bookService.deleteBookFromDatabase(id);
+	}
+	
+	@PutMapping("/updateBook")
+	public String updateBook(@RequestBody BookRequestDTO book) {
+		return bookService.updateBookInDatabase(book);
+	}
+	
+	@PutMapping("/issuebook")
+	public BookDTO issueBook(int studentId,int bookId) {
+		return bookService.issueBookToStudent(studentId,bookId);
+	}
+	
+	@PutMapping("/returnbook")
+	public BookDTO returnBook(int studentId,int bookId) {
+		return bookService.returnBookToLibrary(studentId,bookId);
+	}
+}

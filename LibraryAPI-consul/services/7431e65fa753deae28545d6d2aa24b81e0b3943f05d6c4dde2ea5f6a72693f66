@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"Gateway-8900","Service":"Gateway","Tags":[],"Address":"WIN-0020ML4SOIQ","Meta":{"secure":"false"},"Port":8900,"Weights":{"Passing":1,"Warning":1},"EnableTagOverride":false,"Proxy":{"Mode":"","MeshGateway":{},"Expose":{}},"Connect":{},"PeerName":"","CreateIndex":0,"ModifyIndex":0},"Source":"remote"}

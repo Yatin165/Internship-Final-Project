@@ -1,0 +1,156 @@
+package com.student.service;
+
+import java.net.URI;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestTemplate;
+
+import com.student.aspect.LoggingAspect;
+import com.student.controller.StudentController;
+import com.student.dto.BookDTO;
+import com.student.dto.StudentDTO;
+import com.student.dto.StudentRequestDTO;
+import com.student.entity.Student;
+import com.student.exception.StudentException;
+import com.student.repository.StudentRepository;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
+@Service
+@RefreshScope
+public class StudentService {
+	
+	public static final Log LOGGER = LogFactory.getLog(StudentService.class);
+
+	@Autowired
+	StudentRepository studentRepo;
+
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@Autowired
+	DiscoveryClient client;
+	
+    String url = "http://book-service";
+
+	public Student addStudentToDatabase(StudentRequestDTO student) {
+		Optional<Student> optional = studentRepo.findById(student.getStudentId());
+		if (optional.isEmpty()) {
+			LOGGER.info("In Service Class, adding student to  database");
+			Student studentEntity = student.changeToEntity();
+			studentRepo.save(studentEntity);
+			LOGGER.info("In Service Class, added student to  database");
+			return studentEntity;
+		} else {
+			LOGGER.info("In Service Class,Student is already in database");
+			throw new StudentException("Student with id " + student.getStudentId() + " available in Database");
+		}
+	}
+
+	@CircuitBreaker(name="studentService",fallbackMethod ="getfallbackMethod")
+	public Student getStudentFromDatabase(int id) {
+		Optional<Student> optional = studentRepo.findById(id);
+		if (optional.isEmpty()) {
+			LOGGER.info("In Service Class, Student is not  in database");
+			throw new StudentException("Student with id " + id + " not available in Database");
+		} else {
+			Student student = optional.get();
+			LOGGER.info("In Service Class, Getting student from database");
+			return student;
+		}
+	}
+
+	public Student getfallbackMehtod(int id,Throwable throwable) {
+		System.out.println("FallbackMethod");
+		return new Student();
+	}
+
+	public String deleteStudentFromDatabase(int id) {
+		Optional<Student> optional = studentRepo.findById(id);
+		if (optional.isPresent()) {
+			LOGGER.info("In Service Class, deleting student from database");
+			studentRepo.deleteById(id);
+			LOGGER.info("In Service Class,  student is deleted from database");
+			return "Student with id " + id + "is deleted from database";
+		} else {
+			LOGGER.info("In Service Class, Student is not  in database");
+			throw new StudentException("Student with id " + id + "is already in Database");
+		}
+	}
+
+	@Transactional
+	public Student updateStudentInDatabase(StudentRequestDTO student) {
+		Optional<Student> optional = studentRepo.findById(student.getStudentId());
+		if (optional.isPresent()) {
+			Student studentfromdb = optional.get();
+			LOGGER.info("In Service Class, updating student data in database");
+			studentfromdb.setName(student.getName());
+			studentfromdb.setEmailId(student.getEmailId());
+			studentfromdb.setPhoneNumber(student.getPhoneNumber());
+			LOGGER.info("In Service Class, Student Data is updated  in database");
+			return studentfromdb;
+		} else {
+			LOGGER.info("In Service Class, Student is not  in database");
+			throw new StudentException("Student you are trying to update, with id " + student.getStudentId()
+					+ " is not available in Database");
+		}
+	}
+
+	public StudentDTO issueBookToStudent(int studentId, int bookId) {
+		Optional<Student> optional = studentRepo.findById(studentId);
+		if (optional.isPresent()) {
+			LOGGER.info("In Student Service Class, Issuing Book to Student");
+//			ResponseEntity<BookDTO> response = restTemplate.exchange(
+//					"http://localhost:9090/issuebook?studentId={studentId}&bookId={bookId}", HttpMethod.PUT, null,
+//					BookDTO.class, studentId, bookId);
+			ResponseEntity<BookDTO> response = restTemplate.exchange(url +
+					"/issuebook?studentId={studentId}&bookId={bookId}", HttpMethod.PUT, null,
+					BookDTO.class, studentId, bookId);
+			BookDTO bookDTO = response.getBody();
+			Student studentDB = optional.get();
+			StudentDTO studentDTO = studentDB.convertToDTO();
+			studentDTO.setBookDTO(bookDTO);
+			LOGGER.info("In Student Service Class, Issued Book to Student");
+			return studentDTO;
+		} else {
+			LOGGER.info("In Student Service Class, Student is not available in database");
+			throw new StudentException("Student with id number " + studentId + " is not is database");
+		}
+	}
+
+	public StudentDTO returnBookToLibrary(int studentId, int bookId) {
+		Optional<Student> optional = studentRepo.findById(studentId);
+		if (optional.isPresent()) {
+			LOGGER.info("In Student Service Class, returning Book by Student");
+//			ResponseEntity<BookDTO> response = restTemplate.exchange( 
+//					"http://localhost:9090/returnbook?studentId={studentId}&bookId={bookId}", HttpMethod.PUT, null,
+//					BookDTO.class, studentId, bookId);
+			ResponseEntity<BookDTO> response = restTemplate.exchange(url +
+					"/returnbook?studentId={studentId}&bookId={bookId}", HttpMethod.PUT, null,
+					BookDTO.class, studentId, bookId);
+			BookDTO bookDTO = response.getBody();
+			Student studentDB = optional.get();
+			StudentDTO studentDTO = studentDB.convertToDTO();
+			studentDTO.setBookDTO(bookDTO);
+			LOGGER.info("In Student Service Class, Book Returned by Student");
+			return studentDTO;
+		} else {
+			LOGGER.info("In Student Service Class, Student is not available in database");
+			throw new StudentException("Student with id number " + studentId + " is not is database");
+		}
+	}
+
+}

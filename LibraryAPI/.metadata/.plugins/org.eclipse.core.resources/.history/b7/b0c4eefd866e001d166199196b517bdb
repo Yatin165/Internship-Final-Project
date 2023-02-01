@@ -1,0 +1,5 @@
+package com.book.aspect;
+
+public class LoggingAspect {
+
+}

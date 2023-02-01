@@ -1,0 +1,359 @@
+[INFO ] 2022-11-28 09:21:11.815 [background-preinit] Version - HV000001: Hibernate Validator 6.2.5.Final
+[INFO ] 2022-11-28 09:21:11.948 [restartedMain] DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO ] 2022-11-28 09:21:13.825 [restartedMain] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 09:21:13.836 [restartedMain] BookApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 09:21:15.661 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 09:21:15.998 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 320 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 09:21:16.477 [restartedMain] GenericScope - BeanFactory id=348bfe2d-4ff1-3d24-9d04-a5a7c2b8eee5
+[INFO ] 2022-11-28 09:21:17.964 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+[INFO ] 2022-11-28 09:21:17.992 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:21:17.993 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2022-11-28 09:21:17.994 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 2022-11-28 09:21:18.200 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2022-11-28 09:21:18.202 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4340 ms
+[INFO ] 2022-11-28 09:21:18.839 [restartedMain] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 09:21:19.343 [restartedMain] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 09:21:19.430 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 09:21:19.641 [restartedMain] Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 2022-11-28 09:21:20.044 [restartedMain] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2022-11-28 09:21:20.307 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 09:21:21.334 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 09:21:21.349 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 09:21:21.785 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 09:21:26.195 [restartedMain] OptionalLiveReloadServer - Unable to start LiveReload server
+[WARN ] 2022-11-28 09:21:26.752 [restartedMain] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 09:21:26.769 [restartedMain] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 09:21:27.031 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:21:27.070 [restartedMain] TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+[INFO ] 2022-11-28 09:21:27.075 [restartedMain] ConsulServiceRegistry - Registering service with consul: NewService{id='book-service-9090', name='book-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=9090, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:9090/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+[INFO ] 2022-11-28 09:21:27.486 [restartedMain] BookApiApplication - Started BookApiApplication in 16.655 seconds (JVM running for 18.867)
+[INFO ] 2022-11-28 09:21:28.499 [RMI TCP Connection(4)-127.0.0.1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2022-11-28 09:21:28.499 [RMI TCP Connection(4)-127.0.0.1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2022-11-28 09:21:28.503 [RMI TCP Connection(4)-127.0.0.1] DispatcherServlet - Completed initialization in 4 ms
+[INFO ] 2022-11-28 09:22:53.938 [http-nio-9090-exec-9] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 09:22:53.963 [http-nio-9090-exec-9] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 09:22:54.107 [http-nio-9090-exec-9] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 09:22:54.108 [http-nio-9090-exec-9] BookService - In Book Service Class, Issued Book to Student
+[INFO ] 2022-11-28 09:22:54.206 [http-nio-9090-exec-9] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 09:22:54.289 [http-nio-9090-exec-10] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 09:22:54.289 [http-nio-9090-exec-10] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 09:22:54.295 [http-nio-9090-exec-10] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 09:22:54.295 [http-nio-9090-exec-10] BookService - In Book Service Class, Book is already issued to someone else
+[INFO ] 2022-11-28 09:22:54.300 [http-nio-9090-exec-10] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[WARN ] 2022-11-28 09:22:54.305 [http-nio-9090-exec-10] ExceptionHandlerExceptionResolver - Resolved [com.book.excepiton.BookException: Book is already issued to someone else]
+[INFO ] 2022-11-28 09:26:53.537 [http-nio-9090-exec-6] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 09:26:53.539 [http-nio-9090-exec-6] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 09:26:53.545 [http-nio-9090-exec-6] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 09:26:53.545 [http-nio-9090-exec-6] BookService - In Book Service Class, Book Returned by Student
+[INFO ] 2022-11-28 09:26:53.560 [http-nio-9090-exec-6] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 09:26:53.607 [http-nio-9090-exec-7] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 09:26:53.607 [http-nio-9090-exec-7] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 09:26:53.621 [http-nio-9090-exec-7] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 09:26:53.621 [http-nio-9090-exec-7] BookService - In Book Service Class, Book is not issued to anyone
+[INFO ] 2022-11-28 09:26:53.623 [http-nio-9090-exec-7] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[WARN ] 2022-11-28 09:26:53.625 [http-nio-9090-exec-7] ExceptionHandlerExceptionResolver - Resolved [com.book.excepiton.BookException: Book is not issued to anyone]
+[INFO ] 2022-11-28 09:31:17.054 [http-nio-9090-exec-6] LoggingAspect - Before method invoke::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:31:17.054 [http-nio-9090-exec-6] BookController - In Controller Class, get book method
+[INFO ] 2022-11-28 09:31:17.062 [http-nio-9090-exec-6] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 09:31:17.063 [http-nio-9090-exec-6] LoggingAspect - After method execution::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:31:17.107 [http-nio-9090-exec-7] LoggingAspect - Before method invoke::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:31:17.107 [http-nio-9090-exec-7] BookController - In Controller Class, get book method
+[INFO ] 2022-11-28 09:31:17.114 [http-nio-9090-exec-7] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 09:31:17.115 [http-nio-9090-exec-7] LoggingAspect - After method execution::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:35:12.350 [http-nio-9090-exec-3] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 09:35:12.351 [http-nio-9090-exec-3] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 09:35:12.357 [http-nio-9090-exec-3] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 09:35:12.359 [http-nio-9090-exec-3] BookService - In Book Service Class, Issued Book to Student
+[INFO ] 2022-11-28 09:35:12.372 [http-nio-9090-exec-3] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 09:35:12.413 [http-nio-9090-exec-4] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 09:35:12.413 [http-nio-9090-exec-4] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 09:35:12.420 [http-nio-9090-exec-4] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 09:35:12.421 [http-nio-9090-exec-4] BookService - In Book Service Class, Book is already issued to someone else
+[INFO ] 2022-11-28 09:35:12.422 [http-nio-9090-exec-4] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[WARN ] 2022-11-28 09:35:12.424 [http-nio-9090-exec-4] ExceptionHandlerExceptionResolver - Resolved [com.book.excepiton.BookException: Book is already issued to someone else]
+[INFO ] 2022-11-28 09:49:32.559 [http-nio-9090-exec-2] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 09:49:32.559 [http-nio-9090-exec-2] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 09:49:32.566 [http-nio-9090-exec-2] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 09:49:32.566 [http-nio-9090-exec-2] BookService - In Book Service Class, Book Returned by Student
+[INFO ] 2022-11-28 09:49:32.599 [http-nio-9090-exec-2] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 09:51:00.191 [http-nio-9090-exec-3] LoggingAspect - Before method invoke::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:51:00.192 [http-nio-9090-exec-3] BookController - In Controller Class, get book method
+[INFO ] 2022-11-28 09:51:00.214 [http-nio-9090-exec-3] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 09:51:00.214 [http-nio-9090-exec-3] LoggingAspect - After method execution::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:51:00.224 [http-nio-9090-exec-4] LoggingAspect - Before method invoke::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:51:00.226 [http-nio-9090-exec-4] BookController - In Controller Class, get book method
+[INFO ] 2022-11-28 09:51:00.232 [http-nio-9090-exec-4] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 09:51:00.233 [http-nio-9090-exec-4] LoggingAspect - After method execution::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 09:52:06.860 [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+[INFO ] 2022-11-28 09:52:06.917 [Thread-1] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:52:06.921 [Thread-1] StandardService - Stopping service [Tomcat]
+[INFO ] 2022-11-28 09:52:06.926 [Thread-1] [/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2022-11-28 09:52:06.943 [Thread-1] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:52:06.948 [Thread-1] Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:52:06.952 [Thread-1] ConsulServiceRegistry - Deregistering service with consul: book-service-9090
+[INFO ] 2022-11-28 09:52:06.985 [Thread-1] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-28 09:52:07.004 [Thread-1] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-28 09:52:07.017 [Thread-1] HikariDataSource - d1 - Shutdown completed.
+[INFO ] 2022-11-28 09:52:08.549 [restartedMain] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 09:52:08.554 [restartedMain] BookApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 09:52:09.576 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 09:52:09.596 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 09:52:09.837 [restartedMain] GenericScope - BeanFactory id=348bfe2d-4ff1-3d24-9d04-a5a7c2b8eee5
+[INFO ] 2022-11-28 09:52:10.139 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+[INFO ] 2022-11-28 09:52:10.140 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:52:10.141 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2022-11-28 09:52:10.141 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 2022-11-28 09:52:10.192 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2022-11-28 09:52:10.192 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1630 ms
+[INFO ] 2022-11-28 09:52:10.502 [restartedMain] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 09:52:10.532 [restartedMain] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 09:52:10.538 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 09:52:10.549 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 09:52:10.594 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 09:52:10.595 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 09:52:10.887 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 09:52:13.994 [restartedMain] OptionalLiveReloadServer - Unable to start LiveReload server
+[WARN ] 2022-11-28 09:52:14.441 [restartedMain] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 09:52:14.452 [restartedMain] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 09:52:14.582 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 09:52:14.588 [restartedMain] TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+[INFO ] 2022-11-28 09:52:14.593 [restartedMain] ConsulServiceRegistry - Registering service with consul: NewService{id='book-service-9090', name='book-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=9090, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:9090/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+[INFO ] 2022-11-28 09:52:15.003 [restartedMain] BookApiApplication - Started BookApiApplication in 7.714 seconds (JVM running for 1866.384)
+[INFO ] 2022-11-28 09:52:15.010 [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2022-11-28 09:52:18.445 [http-nio-9090-exec-2] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2022-11-28 09:52:18.445 [http-nio-9090-exec-2] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2022-11-28 09:52:18.450 [http-nio-9090-exec-2] DispatcherServlet - Completed initialization in 4 ms
+[INFO ] 2022-11-28 10:03:59.611 [http-nio-9090-exec-2] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:03:59.632 [http-nio-9090-exec-2] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 10:03:59.665 [http-nio-9090-exec-2] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 10:03:59.665 [http-nio-9090-exec-2] BookService - In Book Service Class, Issued Book to Student
+[INFO ] 2022-11-28 10:03:59.683 [http-nio-9090-exec-2] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:15:41.558 [http-nio-9090-exec-3] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:15:41.559 [http-nio-9090-exec-3] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 10:15:41.565 [http-nio-9090-exec-3] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 10:15:41.565 [http-nio-9090-exec-3] BookService - In Book Service Class, Issued Book to Student
+[INFO ] 2022-11-28 10:15:41.579 [http-nio-9090-exec-3] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:17:53.062 [http-nio-9090-exec-10] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:17:53.062 [http-nio-9090-exec-10] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 10:17:53.067 [http-nio-9090-exec-10] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 10:17:53.067 [http-nio-9090-exec-10] BookService - In Book Service Class, Book Returned by Student
+[INFO ] 2022-11-28 10:17:53.263 [http-nio-9090-exec-10] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:20:32.437 [http-nio-9090-exec-8] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:20:32.438 [http-nio-9090-exec-8] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 10:20:32.444 [http-nio-9090-exec-8] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 10:20:32.444 [http-nio-9090-exec-8] BookService - In Book Service Class, Book Returned by Student
+[INFO ] 2022-11-28 10:20:32.454 [http-nio-9090-exec-8] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:23:47.720 [http-nio-9090-exec-7] AbstractOpenApiResource - Init duration for springdoc-openapi is: 728 ms
+[INFO ] 2022-11-28 10:24:51.692 [http-nio-9090-exec-10] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:24:51.692 [http-nio-9090-exec-10] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 10:24:51.700 [http-nio-9090-exec-10] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 10:24:51.700 [http-nio-9090-exec-10] BookService - In Book Service Class, Issued Book to Student
+[INFO ] 2022-11-28 10:24:51.717 [http-nio-9090-exec-10] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:24:58.219 [http-nio-9090-exec-2] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:24:58.220 [http-nio-9090-exec-2] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 10:24:58.224 [http-nio-9090-exec-2] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 10:24:58.225 [http-nio-9090-exec-2] BookService - In Book Service Class, Book is already issued to someone else
+[INFO ] 2022-11-28 10:24:58.225 [http-nio-9090-exec-2] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[WARN ] 2022-11-28 10:24:58.231 [http-nio-9090-exec-2] ExceptionHandlerExceptionResolver - Resolved [com.book.excepiton.BookException: Book is already issued to someone else]
+[INFO ] 2022-11-28 10:26:40.147 [http-nio-9090-exec-6] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:26:40.149 [http-nio-9090-exec-6] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 10:26:40.154 [http-nio-9090-exec-6] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 10:26:40.154 [http-nio-9090-exec-6] BookService - In Book Service Class, Book is already issued to someone else
+[INFO ] 2022-11-28 10:26:40.154 [http-nio-9090-exec-6] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[WARN ] 2022-11-28 10:26:40.154 [http-nio-9090-exec-6] ExceptionHandlerExceptionResolver - Resolved [com.book.excepiton.BookException: Book is already issued to someone else]
+[INFO ] 2022-11-28 10:28:51.489 [http-nio-9090-exec-8] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:28:51.490 [http-nio-9090-exec-8] BookController - In Book Controller Class, issuebook book method
+[INFO ] 2022-11-28 10:28:51.495 [http-nio-9090-exec-8] BookService - In Book Service Class, Issuing Book to Student
+[INFO ] 2022-11-28 10:28:51.495 [http-nio-9090-exec-8] BookService - In Book Service Class, Issued Book to Student
+[INFO ] 2022-11-28 10:28:51.514 [http-nio-9090-exec-8] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.issueBook(int,int)
+[INFO ] 2022-11-28 10:29:48.368 [http-nio-9090-exec-5] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:29:48.369 [http-nio-9090-exec-5] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 10:29:48.379 [http-nio-9090-exec-5] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 10:29:48.381 [http-nio-9090-exec-5] BookService - In Book Service Class, Book Returned by Student
+[INFO ] 2022-11-28 10:29:48.394 [http-nio-9090-exec-5] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:29:55.792 [http-nio-9090-exec-7] LoggingAspect - Before method invoke::BookDTO com.book.controller.BookController.returnBook(int,int)
+[INFO ] 2022-11-28 10:29:55.794 [http-nio-9090-exec-7] BookController - In Book Controller Class, returnbook book method
+[INFO ] 2022-11-28 10:29:55.794 [http-nio-9090-exec-7] BookService - In Book Service Class, returning Book by Student
+[INFO ] 2022-11-28 10:29:55.799 [http-nio-9090-exec-7] BookService - In Book Service Class, Book is not issued to anyone
+[INFO ] 2022-11-28 10:29:55.802 [http-nio-9090-exec-7] LoggingAspect - After method execution::BookDTO com.book.controller.BookController.returnBook(int,int)
+[WARN ] 2022-11-28 10:29:55.802 [http-nio-9090-exec-7] ExceptionHandlerExceptionResolver - Resolved [com.book.excepiton.BookException: Book is not issued to anyone]
+[INFO ] 2022-11-28 11:22:01.863 [main] SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.book.service.BookServiceTest], using SpringBootContextLoader
+[INFO ] 2022-11-28 11:22:01.884 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.book.service.BookServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2022-11-28 11:22:01.892 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.book.service.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2022-11-28 11:22:02.189 [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.book.BookApiApplication for test class com.book.service.BookServiceTest
+[INFO ] 2022-11-28 11:22:02.415 [main] SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2022-11-28 11:22:02.470 [main] SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@55120f99, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@794b435f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@38f2e97e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@779dfe55, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@323659f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1144a55a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e521715, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@26a529dc, org.springframework.test.context.event.EventPublishingTestExecutionListener@265c5d69, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1286528d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3cc20577, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@33a630fa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@775594f2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5767b2af, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7b22ec89]
+[INFO ] 2022-11-28 11:22:03.646 [background-preinit] Version - HV000001: Hibernate Validator 6.2.5.Final
+[INFO ] 2022-11-28 11:22:06.616 [main] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 11:22:06.650 [main] BookServiceTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 11:22:08.779 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 11:22:09.136 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 341 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 11:22:09.705 [main] GenericScope - BeanFactory id=0d27f10d-659d-308c-8ec0-e03e4da2d84e
+[INFO ] 2022-11-28 11:22:11.182 [main] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 11:22:11.880 [main] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 11:22:12.287 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 11:22:12.717 [main] Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 2022-11-28 11:22:13.160 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2022-11-28 11:22:13.790 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 11:22:15.071 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 11:22:15.093 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 11:22:16.352 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 11:22:27.220 [main] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 11:22:27.251 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 11:22:27.704 [main] BookServiceTest - Started BookServiceTest in 25.138 seconds (JVM running for 29.017)
+[INFO ] 2022-11-28 11:22:28.380 [main] BookService - In Service Class, deleting book from database
+[INFO ] 2022-11-28 11:22:28.381 [main] BookService - In Service Class,  book is deleted from database
+[INFO ] 2022-11-28 11:22:28.424 [main] BookService - In Service Class, updating book data in database
+[INFO ] 2022-11-28 11:22:28.426 [main] BookService - In Service Class, Book is updated  in database
+[INFO ] 2022-11-28 11:22:28.514 [main] BookService - In Service Class, adding book to in database
+[INFO ] 2022-11-28 11:22:28.523 [main] BookService - In Service Class, added book to in database
+[INFO ] 2022-11-28 11:22:28.558 [main] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 11:22:28.737 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-28 11:22:28.752 [SpringApplicationShutdownHook] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-28 11:22:28.816 [SpringApplicationShutdownHook] HikariDataSource - d1 - Shutdown completed.
+[INFO ] 2022-11-28 11:25:49.931 [main] SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.book.service.BookServiceTest], using SpringBootContextLoader
+[INFO ] 2022-11-28 11:25:49.956 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.book.service.BookServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2022-11-28 11:25:49.957 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.book.service.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2022-11-28 11:25:50.223 [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.book.BookApiApplication for test class com.book.service.BookServiceTest
+[INFO ] 2022-11-28 11:25:50.425 [main] SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2022-11-28 11:25:50.471 [main] SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@55120f99, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@794b435f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@38f2e97e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@779dfe55, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@323659f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1144a55a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e521715, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@26a529dc, org.springframework.test.context.event.EventPublishingTestExecutionListener@265c5d69, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1286528d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3cc20577, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@33a630fa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@775594f2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5767b2af, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7b22ec89]
+[INFO ] 2022-11-28 11:25:51.824 [background-preinit] Version - HV000001: Hibernate Validator 6.2.5.Final
+[INFO ] 2022-11-28 11:25:55.197 [main] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 11:25:55.239 [main] BookServiceTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 11:25:57.379 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 11:25:57.751 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 353 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 11:25:58.314 [main] GenericScope - BeanFactory id=0d27f10d-659d-308c-8ec0-e03e4da2d84e
+[INFO ] 2022-11-28 11:26:00.214 [main] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 11:26:01.259 [main] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 11:26:01.623 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 11:26:02.026 [main] Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 2022-11-28 11:26:02.544 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2022-11-28 11:26:02.932 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 11:26:04.276 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 11:26:04.297 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 11:26:05.967 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 11:26:18.390 [main] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 11:26:18.428 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 11:26:18.961 [main] BookServiceTest - Started BookServiceTest in 28.376 seconds (JVM running for 31.998)
+[INFO ] 2022-11-28 11:26:19.768 [main] BookService - In Service Class, deleting book from database
+[INFO ] 2022-11-28 11:26:19.770 [main] BookService - In Service Class,  book is deleted from database
+[INFO ] 2022-11-28 11:26:19.831 [main] BookService - In Service Class, updating book data in database
+[INFO ] 2022-11-28 11:26:19.831 [main] BookService - In Service Class, Book is updated  in database
+[INFO ] 2022-11-28 11:26:19.865 [main] BookService - In Service Class, adding book to in database
+[INFO ] 2022-11-28 11:26:19.867 [main] BookService - In Service Class, added book to in database
+[INFO ] 2022-11-28 11:26:19.887 [main] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 11:26:20.054 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-28 11:26:20.076 [SpringApplicationShutdownHook] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-28 11:26:20.155 [SpringApplicationShutdownHook] HikariDataSource - d1 - Shutdown completed.
+[INFO ] 2022-11-28 11:28:20.677 [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+[INFO ] 2022-11-28 11:28:20.882 [Thread-8] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:20.897 [Thread-8] StandardService - Stopping service [Tomcat]
+[INFO ] 2022-11-28 11:28:20.968 [Thread-8] [/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2022-11-28 11:28:21.045 [Thread-8] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:21.104 [Thread-8] Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:21.166 [Thread-8] ConsulServiceRegistry - Deregistering service with consul: book-service-9090
+[INFO ] 2022-11-28 11:28:27.019 [Thread-8] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-28 11:28:27.057 [Thread-8] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-28 11:28:27.073 [Thread-8] HikariDataSource - d1 - Shutdown completed.
+[INFO ] 2022-11-28 11:28:29.003 [restartedMain] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 11:28:29.006 [restartedMain] BookApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 11:28:29.807 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 11:28:29.825 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 11:28:30.070 [restartedMain] GenericScope - BeanFactory id=348bfe2d-4ff1-3d24-9d04-a5a7c2b8eee5
+[INFO ] 2022-11-28 11:28:30.458 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+[INFO ] 2022-11-28 11:28:30.459 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:30.460 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2022-11-28 11:28:30.460 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 2022-11-28 11:28:30.504 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2022-11-28 11:28:30.504 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1491 ms
+[INFO ] 2022-11-28 11:28:30.794 [restartedMain] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 11:28:30.818 [restartedMain] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 11:28:30.826 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 11:28:30.836 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 11:28:30.890 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 11:28:30.890 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 11:28:31.207 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 11:28:34.289 [restartedMain] OptionalLiveReloadServer - Unable to start LiveReload server
+[WARN ] 2022-11-28 11:28:34.752 [restartedMain] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 11:28:34.765 [restartedMain] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 11:28:34.904 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:34.909 [restartedMain] TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+[INFO ] 2022-11-28 11:28:34.915 [restartedMain] ConsulServiceRegistry - Registering service with consul: NewService{id='book-service-9090', name='book-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=9090, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:9090/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+[INFO ] 2022-11-28 11:28:35.317 [restartedMain] BookApiApplication - Started BookApiApplication in 7.178 seconds (JVM running for 7646.699)
+[INFO ] 2022-11-28 11:28:35.324 [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2022-11-28 11:28:41.052 [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2022-11-28 11:28:41.074 [Thread-15] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:41.076 [Thread-15] StandardService - Stopping service [Tomcat]
+[INFO ] 2022-11-28 11:28:41.079 [Thread-15] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:41.081 [Thread-15] Http11NioProtocol - Destroying ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:41.082 [Thread-15] ConsulServiceRegistry - Deregistering service with consul: book-service-9090
+[INFO ] 2022-11-28 11:28:41.103 [Thread-15] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-28 11:28:41.106 [Thread-15] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-28 11:28:41.122 [Thread-15] HikariDataSource - d1 - Shutdown completed.
+[INFO ] 2022-11-28 11:28:42.097 [restartedMain] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 11:28:42.102 [restartedMain] BookApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 11:28:42.729 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 11:28:42.743 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 11:28:42.907 [restartedMain] GenericScope - BeanFactory id=348bfe2d-4ff1-3d24-9d04-a5a7c2b8eee5
+[INFO ] 2022-11-28 11:28:43.197 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+[INFO ] 2022-11-28 11:28:43.198 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:43.200 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2022-11-28 11:28:43.200 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 2022-11-28 11:28:43.244 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2022-11-28 11:28:43.245 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1139 ms
+[INFO ] 2022-11-28 11:28:43.756 [restartedMain] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 11:28:43.783 [restartedMain] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 11:28:43.790 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 11:28:43.804 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 11:28:43.862 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 11:28:43.863 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 11:28:44.310 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 11:28:47.359 [restartedMain] OptionalLiveReloadServer - Unable to start LiveReload server
+[WARN ] 2022-11-28 11:28:47.816 [restartedMain] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 11:28:47.824 [restartedMain] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 11:28:47.960 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+[INFO ] 2022-11-28 11:28:47.964 [restartedMain] TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+[INFO ] 2022-11-28 11:28:47.973 [restartedMain] ConsulServiceRegistry - Registering service with consul: NewService{id='book-service-9090', name='book-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=9090, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:9090/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+[INFO ] 2022-11-28 11:28:48.392 [restartedMain] BookApiApplication - Started BookApiApplication in 7.075 seconds (JVM running for 7659.773)
+[INFO ] 2022-11-28 11:28:48.407 [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2022-11-28 11:28:54.745 [http-nio-9090-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2022-11-28 11:28:54.745 [http-nio-9090-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2022-11-28 11:28:54.748 [http-nio-9090-exec-1] DispatcherServlet - Completed initialization in 3 ms
+[INFO ] 2022-11-28 11:29:36.573 [main] SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.book.service.BookServiceTest], using SpringBootContextLoader
+[INFO ] 2022-11-28 11:29:36.595 [main] AbstractContextLoader - Could not detect default resource locations for test class [com.book.service.BookServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2022-11-28 11:29:36.597 [main] AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.book.service.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2022-11-28 11:29:36.865 [main] SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.book.BookApiApplication for test class com.book.service.BookServiceTest
+[INFO ] 2022-11-28 11:29:37.119 [main] SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2022-11-28 11:29:37.159 [main] SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@55120f99, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@794b435f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@38f2e97e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@779dfe55, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@323659f8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1144a55a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e521715, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@26a529dc, org.springframework.test.context.event.EventPublishingTestExecutionListener@265c5d69, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1286528d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3cc20577, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@33a630fa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@775594f2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5767b2af, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7b22ec89]
+[INFO ] 2022-11-28 11:29:38.328 [background-preinit] Version - HV000001: Hibernate Validator 6.2.5.Final
+[INFO ] 2022-11-28 11:29:41.345 [main] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/book-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-28 11:29:41.379 [main] BookServiceTest - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-28 11:29:43.477 [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-28 11:29:43.833 [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 338 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-28 11:29:44.394 [main] GenericScope - BeanFactory id=0d27f10d-659d-308c-8ec0-e03e4da2d84e
+[INFO ] 2022-11-28 11:29:46.118 [main] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-28 11:29:46.871 [main] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-28 11:29:47.073 [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-28 11:29:47.364 [main] Version - HHH000412: Hibernate ORM core version 5.6.12.Final
+[INFO ] 2022-11-28 11:29:47.788 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2022-11-28 11:29:48.126 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-28 11:29:49.241 [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-28 11:29:49.272 [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-28 11:29:50.585 [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[WARN ] 2022-11-28 11:29:59.405 [main] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-28 11:29:59.435 [main] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-28 11:29:59.911 [main] BookServiceTest - Started BookServiceTest in 22.642 seconds (JVM running for 26.162)
+[INFO ] 2022-11-28 11:30:00.606 [main] BookService - In Service Class, deleting book from database
+[INFO ] 2022-11-28 11:30:00.607 [main] BookService - In Service Class,  book is deleted from database
+[INFO ] 2022-11-28 11:30:00.656 [main] BookService - In Service Class, updating book data in database
+[INFO ] 2022-11-28 11:30:00.656 [main] BookService - In Service Class, Book is updated  in database
+[INFO ] 2022-11-28 11:30:00.682 [main] BookService - In Service Class, adding book to in database
+[INFO ] 2022-11-28 11:30:00.688 [main] BookService - In Service Class, added book to in database
+[INFO ] 2022-11-28 11:30:00.715 [main] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 11:30:00.788 [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-28 11:30:00.796 [SpringApplicationShutdownHook] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-28 11:30:00.864 [SpringApplicationShutdownHook] HikariDataSource - d1 - Shutdown completed.
+[INFO ] 2022-11-28 11:36:52.489 [http-nio-9090-exec-9] LoggingAspect - Before method invoke::Book com.book.controller.BookController.getBook(int)
+[INFO ] 2022-11-28 11:36:52.501 [http-nio-9090-exec-9] BookController - In Controller Class, get book method
+[INFO ] 2022-11-28 11:36:52.526 [http-nio-9090-exec-9] BookService - In Service Class, Getting book from database
+[INFO ] 2022-11-28 11:36:52.526 [http-nio-9090-exec-9] LoggingAspect - After method execution::Book com.book.controller.BookController.getBook(int)

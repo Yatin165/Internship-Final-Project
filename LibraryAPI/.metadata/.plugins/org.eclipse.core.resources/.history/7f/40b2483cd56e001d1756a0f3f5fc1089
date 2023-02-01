@@ -1,0 +1,110 @@
+package com.student.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import com.student.dto.BookDTO;
+import com.student.dto.StudentDTO;
+import com.student.dto.StudentRequestDTO;
+import com.student.entity.Student;
+import com.student.exception.StudentException;
+import com.student.repository.StudentRepository;
+
+@SpringBootTest
+class StudentServiceTest {
+
+	@InjectMocks
+	StudentService studentService;
+
+	@Mock
+	StudentRepository studentRepository;
+	
+	@Mock
+	RestTemplate restTemplate;
+
+	private Student studentMockObject;
+	private StudentDTO studentDTOMock;
+	private StudentRequestDTO requestDTOMock;
+	private BookDTO bookDTOMock;
+	private String url =  "http://book-service";
+
+	@BeforeEach
+	public void StudentDTOInitialize() {
+		studentMockObject = new Student();
+		studentMockObject.setStudentId(55);
+
+		studentDTOMock = new StudentDTO();
+		studentDTOMock.setStudentId(55);
+
+		requestDTOMock = new StudentRequestDTO();
+		requestDTOMock.setStudentId(55);
+		
+		bookDTOMock = new BookDTO();
+		bookDTOMock.setBookId(100);
+	}
+
+	@Test
+	void testissueBookToStudent_WhenStudentNotInDatabase() {
+		when(studentRepository.findById(ArgumentMatchers.anyInt())).thenReturn(Optional.empty());
+		assertThrows(StudentException.class, () -> studentService.issueBookToStudent(ArgumentMatchers.anyInt(), 10));
+	}
+
+	@Test
+	void testIssueBookToStudent_WhenStudentIsInDatabase() {
+		when(studentRepository.findById(55)).thenReturn(Optional.of(studentMockObject));
+		when(restTemplate.exchange(url + "/issuebook?studentId={studentId}&bookId={bookId}", 
+					HttpMethod.PUT, null, BookDTO.class, 55,100)).thenReturn(ResponseEntity.ok(bookDTOMock));
+		
+		assertEquals(55, studentService.issueBookToStudent(55, 100).getStudentId());
+	}
+	
+//	@Test
+//	void testReturnBookToLibrary_WhenStudentIsInDatabase() {
+//		when(studentRepository.findById(55)).thenReturn(Optional.of(studentMockObject));
+//		when(restTemplate.exchange(url + "/returnbook?studentId={studentId}&bookId={bookId}", 
+//					HttpMethod.PUT, null, BookDTO.class, 55,100)).thenReturn(ResponseEntity.ok(bookDTOMock));
+//		
+//		assertEquals(55, studentService.returnBookToLibrary(55, 100).getStudentId());
+//	}
+
+	@Test
+	void testaddStudentToDatabase_WhenStudentNotInDatabase() {
+		when(studentRepository.findById(ArgumentMatchers.anyInt())).thenReturn(Optional.empty());
+		when(studentRepository.save(studentMockObject)).thenReturn(studentMockObject);
+		
+		assertEquals(55, studentService.addStudentToDatabase(requestDTOMock).getStudentId());
+	}
+	
+	@Test
+	void testgetStudentFromDatabase_WhenStudentIsInDatabase() {
+		when(studentRepository.findById(studentMockObject.getStudentId())).thenReturn(Optional.of(studentMockObject));
+		assertEquals(55,studentService.getStudentFromDatabase(55).getStudentId());
+	}
+
+	@Test
+	void testdeleteStudentFromDatabase() {
+		when(studentRepository.findById(ArgumentMatchers.anyInt())).thenReturn(Optional.of(new Student()));
+		assertNotNull(studentService.deleteStudentFromDatabase(100));
+	}
+	
+	@Test
+	void testupdateStudentInDatabase() {
+		when(studentRepository.findById(ArgumentMatchers.anyInt())).thenReturn(Optional.of(new Student()));
+		assertInstanceOf(Student.class,studentService.updateStudentInDatabase(requestDTOMock));
+	}
+}

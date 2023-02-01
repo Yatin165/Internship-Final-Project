@@ -1,0 +1,39 @@
+[INFO ] 2022-11-23 16:05:21.407 [restartedMain] PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-config/student-service/'}, BootstrapPropertySource {name='bootstrapProperties-config/application/'}]
+[INFO ] 2022-11-23 16:05:21.428 [restartedMain] StudentApiApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2022-11-23 16:05:22.687 [restartedMain] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2022-11-23 16:05:22.713 [restartedMain] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 1 JPA repository interfaces.
+[INFO ] 2022-11-23 16:05:22.946 [restartedMain] GenericScope - BeanFactory id=42c6fedd-14db-3d31-af62-eb661888cc79
+[INFO ] 2022-11-23 16:05:23.551 [restartedMain] TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+[INFO ] 2022-11-23 16:05:23.552 [restartedMain] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2022-11-23 16:05:23.553 [restartedMain] StandardService - Starting service [Tomcat]
+[INFO ] 2022-11-23 16:05:23.554 [restartedMain] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+[INFO ] 2022-11-23 16:05:23.637 [restartedMain] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2022-11-23 16:05:23.637 [restartedMain] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2199 ms
+[INFO ] 2022-11-23 16:05:24.439 [restartedMain] HikariDataSource - d1 - Starting...
+[INFO ] 2022-11-23 16:05:24.469 [restartedMain] HikariDataSource - d1 - Start completed.
+[INFO ] 2022-11-23 16:05:24.479 [restartedMain] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2022-11-23 16:05:24.491 [restartedMain] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2022-11-23 16:05:24.568 [restartedMain] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2022-11-23 16:05:24.569 [restartedMain] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2022-11-23 16:05:25.402 [restartedMain] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2022-11-23 16:05:32.238 [restartedMain] OptionalLiveReloadServer - LiveReload server is running on port 35729
+[WARN ] 2022-11-23 16:05:33.133 [restartedMain] LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2022-11-23 16:05:33.164 [restartedMain] EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[INFO ] 2022-11-23 16:05:33.314 [restartedMain] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+[INFO ] 2022-11-23 16:05:33.320 [restartedMain] TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+[INFO ] 2022-11-23 16:05:33.337 [restartedMain] ConsulServiceRegistry - Registering service with consul: NewService{id='student-service-8082', name='student-service', tags=[], address='WIN-0020ML4SOIQ', meta={secure=false}, port=8082, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://WIN-0020ML4SOIQ:8082/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+[INFO ] 2022-11-23 16:05:33.866 [restartedMain] StudentApiApplication - Started StudentApiApplication in 13.798 seconds (JVM running for 1275.364)
+[INFO ] 2022-11-23 16:05:33.871 [restartedMain] ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[INFO ] 2022-11-23 16:05:37.521 [http-nio-8082-exec-1] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2022-11-23 16:05:37.521 [http-nio-8082-exec-1] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2022-11-23 16:05:37.526 [http-nio-8082-exec-1] DispatcherServlet - Completed initialization in 5 ms
+[INFO ] 2022-11-23 16:06:20.166 [File Watcher] LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+[INFO ] 2022-11-23 16:06:20.196 [Thread-17] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+[INFO ] 2022-11-23 16:06:20.196 [Thread-17] StandardService - Stopping service [Tomcat]
+[INFO ] 2022-11-23 16:06:20.197 [Thread-17] [/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 2022-11-23 16:06:20.201 [Thread-17] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+[INFO ] 2022-11-23 16:06:20.210 [Thread-17] Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8082"]
+[INFO ] 2022-11-23 16:06:20.217 [Thread-17] ConsulServiceRegistry - Deregistering service with consul: student-service-8082
+[INFO ] 2022-11-23 16:06:20.251 [Thread-17] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2022-11-23 16:06:20.257 [Thread-17] HikariDataSource - d1 - Shutdown initiated...
+[INFO ] 2022-11-23 16:06:20.274 [Thread-17] HikariDataSource - d1 - Shutdown completed.

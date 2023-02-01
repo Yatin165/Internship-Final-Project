@@ -1,0 +1,66 @@
+package com.student.controller;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.student.dto.StudentDTO;
+import com.student.dto.StudentRequestDTO;
+import com.student.entity.Student;
+import com.student.service.StudentService;
+
+@RestController
+@CrossOrigin
+public class StudentController {
+
+	public static final Log LOGGER = LogFactory.getLog(StudentController.class);
+	
+	@Autowired
+	StudentService studentService;
+	
+	@PostMapping("/addStudent")
+	public Student addStudent(@RequestBody StudentRequestDTO student) {
+		LOGGER.info("In Student Controller Class, add student method");
+		return studentService.addStudentToDatabase(student);
+	}
+	
+	@GetMapping("/getStudent")
+	public Student getStudent(int id) {
+		LOGGER.info("In Student Controller Class, get student method");
+		return studentService.getStudentFromDatabase(id);
+	}
+	
+	@DeleteMapping("/deleteStudent")
+	public String deleteStudent(int id) {
+		LOGGER.info("In Student Controller Class, delete student method");
+		return studentService.deleteStudentFromDatabase(id);
+	}
+	
+	@PutMapping("/updateStudent")
+	public Student updateStudent(@RequestBody StudentRequestDTO student) {
+		LOGGER.info("In Student Controller Class, update student method");
+		return studentService.updateStudentInDatabase(student);
+	}
+	
+	@GetMapping("/issueBook")
+	public StudentDTO issueBook(int studentId,int bookId) {
+		LOGGER.info("In Student Controller Class, issue book method");
+		return studentService.issueBookToStudent(studentId,bookId);
+		
+	}
+
+	@GetMapping("/returnBook")
+	public StudentDTO returnBook(int studentId,int bookId) {
+		LOGGER.info("In Student Controller Class, return book method");
+		return studentService.returnBookToLibrary(studentId,bookId);
+	}
+}
